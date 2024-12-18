@@ -1,0 +1,315 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT-serif', sans-serif;
+}
+.navbar {
+    width: 100%;
+    background-color: rgb(30, 60, 210);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    height: 80px; 
+    padding: 0 20px; 
+}
+
+.navbar img {
+    height: 60px; 
+    width: auto; 
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; 
+}
+
+li {
+    margin: 0;
+}
+
+a {
+    padding: 20px 15px; 
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    background-color: rgb(58, 109, 212); 
+}
+
+#section1, #section2, #section3, #section4, #section5 {
+    height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+#section1 {
+    height: 800px;
+    background-image: url(3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex; /* Use flexbox for easy centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Needed to position overlay */
+    color: #fff; /* Ensure text is white */
+    font-size: x-large; 
+    font-weight: bold;
+    text-align: center; /* Center text */
+}
+
+#section1 h1 {
+    position: relative; /* Ensure the header stays above the background */
+    z-index: 2; /* Ensure it's above the background and other content */
+    margin: 0;
+    padding: 20px; /* Padding for spacing */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to make text more readable */
+}
+
+#section1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for contrast */
+    z-index: 1; /* Set overlay below the text */
+}
+
+/* Section 2 - Restoring previous layout */
+#section2 {
+    height: 800px;
+    background-color: rgb(218, 202, 113);
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding-left: 50px; 
+    position: relative;
+}
+
+.header-image {
+    width: 40%; 
+    max-width: 500px; 
+    height: auto; 
+}
+
+.section2-content {
+    width: 50%; 
+    text-align: justify; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff;
+    padding: 20px; 
+    border-radius: 5px; 
+    margin-right: 0; 
+    position: absolute; 
+    right: 0; 
+}
+
+#section3 {
+    min-height: 700px;
+    background-color: rgb(175, 41, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section3-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+}
+
+.section3-wrapper .text-content {
+    width: 35%;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.section3-wrapper .image-grid {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Increased gap between rows */
+    margin-left: auto; /* Push images further to the right */
+}
+
+.section3-wrapper .image-grid .row {
+    display: flex;
+    justify-content: center; /* Center images in each row */
+    gap: 40px; /* Increased spacing between images */
+}
+
+.section3-wrapper .image-grid .image-item img {
+    width: 100%; 
+    max-width: 500px; 
+    height: auto; 
+}
+
+#section4 {
+    padding: 3rem;
+    background-color: #333; /* Adjust as per your design */
+    height: 850px;
+}
+
+#section4 .content {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: x-small;
+    color: #fff;
+}
+
+#section4 .content .image-item {
+    max-width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 200px;
+}
+
+#section4 .content .image-item h1 {
+    height: 70px;
+}
+
+#section4 .content img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+}
+
+/* Style for the new preservation content */
+#section4 .preservation-content {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #444; /* Background for the text */
+    border-radius: 8px;
+    color: #fff;
+}
+
+#section4 .preservation-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#section4 .preservation-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#section5 {
+    min-height: 1000px; /* Increased height to accommodate bottom images */
+    background-color: rgb(45, 128, 34);
+    display: flex;
+    flex-direction: column; /* Stack top and bottom sections */
+    justify-content: space-between; /* Push bottom content to the bottom */
+    padding: 20px 50px;
+    position: relative;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.section5-top {
+    display: flex; /* Align text and image side-by-side */
+    justify-content: space-between; /* Push items to opposite sides */
+    align-items: center; /* Center vertically */
+    width: 100%;
+}
+
+.header-image {
+    width: 40%;
+    max-width: 500px;
+    height: auto;
+}
+
+.section5-content {
+    width: 50%;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    padding-left: 50px;
+    z-index: 1; 
+    margin-right: 0; 
+    position: absolute; 
+    right: 0; 
+}
+
+.bottom-images {
+    display: flex; /* Place images in a horizontal row */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 50px; /* Add spacing between images */
+    padding-top: 20px; /* Space between top and bottom sections */
+}
+
+.bottom-images .image-item img {
+    width: 400px; /* Set a fixed width for the images */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow */
+}
+
+
+#section6 {
+    background-color: rgb(25, 21, 132); /* Background color */
+    color: white; /* Text color for better contrast */
+    padding: 40px 20px; /* Top, bottom, and side padding */
+    text-align: center; /* Center-align all text */
+    font-family: Arial, sans-serif;
+}
+
+.section-header {
+    font-size: 2rem; /* Header font size */
+    margin-bottom: 20px; /* Spacing below header */
+    text-transform: uppercase; /* Header in uppercase */
+    font-weight: bold;
+}
+
+#section6 a {
+    color: #ffd700; /* Yellow color for links */
+    text-decoration: underline; /* Underline links */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth link hover effect */
+}
+
+#section6 a:hover {
+    color: #fff; /* White color on hover */
+}
+
+.credits {
+    margin-top: 30px; /* Space above credits */
+    font-size: 0.9rem; /* Smaller font size for credits */
+    font-style: italic; /* Italicize credits */
+}
